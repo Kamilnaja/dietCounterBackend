@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "serek wiejski",
+            "kcal": 200,
+            "info": "serek wiejski, bogaty w białko",
+            "category": "permitted"
+        },
+        {
+            "id": 2,
+            "name": "Kiełbasa",
+            "kcal": 300,
+            "info": "kiełbasa polska, za dużo tłuszczu",
+            "category": "forbidden"
+        },
+        {
+            "id": 3,
+            "name": "Utopence",
+            "kcal": 300,
+            "info": "czeskie parówki w occie",
+            "category": "forbidden"
+        },
+        {
+            "id": 4,
+            "name": "Papryka",
+            "kcal": 300,
+            "category": "permitted"
+        },
+        {
+            "id": 5,
+            "name": "Pomidor",
+            "kcal": 30
+        },
+        {
+            "id": 6,
+            "name": "Kapusta włoska",
+            "kcal": 123,
+            "category": "permitted"
+        }
+    ]
+}

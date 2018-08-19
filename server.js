@@ -12,16 +12,4 @@ app.use(cors());
 
 app.use('/', routes);
 
-app.get('/', (req, res) => {
-	res.json('Hello world');
-});
-
-app.get('/categories', (req, res) => {
-	res.json(allProducts);
-})
-
-app.get('/forbidden', (req, res) => {
-	res.json(allProducts);
-})
-
 app.listen(port, console.log('hello world'));

@@ -4,4 +4,10 @@ const productsCtrl = require('./controllers/productsCtrl');
 
 router.get('/allProducts', productsCtrl.getProducts);
 
-module.exports = router;
+router.get('/categories', productsCtrl.getCategories);
+
+router.get('/forbidden', productsCtrl.getForbidden);
+
+router.get('/permitted', productsCtrl.getPermitted);
+
+module.exports = router; 
