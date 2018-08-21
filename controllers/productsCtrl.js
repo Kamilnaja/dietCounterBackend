@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const productsSchema = require('../models/products');
+const productsSchema = require('../models/productsModel');
 const productsModel = mongoose.model('Product', productsSchema);
 
 function getProductsFromDb(req, res) {
@@ -16,7 +16,17 @@ function getCategoriesFromDb(req, res) {
         .find({})
         .exec((err, data) => {
             if (err) console.log(err);
-            res.send(data);
+            let filteredData = data;
+            let categories = [];
+            console.log(typeof filteredData);
+
+            for (data in filteredData) {
+                if (!categories.includes(filteredData[data].category)) {
+                    categories.push(filteredData[data].category);
+                }
+                console.log(categories);
+            }
+            res.send(categories);
         })
 }
 
