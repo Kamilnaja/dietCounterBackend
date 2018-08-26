@@ -48,6 +48,23 @@ function getPermittedFromDb(req, res) {
         })
 }
 
+function addProductToDb(req, res) {
+    var sent_data = req.body;
+
+    var payload = new productsModel({
+        name: req.body.name,
+        kcal: req.body.kcal,
+        category: req.body.category
+    });
+    payload.save((err) => {
+        if (err) console.log(err);
+        productsModel.find({}).exec((err, data) => {
+            if (err) console.log(err);
+            res.send(data);
+        })
+    })
+}
+
 exports.getProducts = (req, res) => {
     getProductsFromDb(req, res);
 }
@@ -62,4 +79,8 @@ exports.getForbidden = (req, res) => {
 
 exports.getPermitted = (req, res) => {
     getPermittedFromDb(req, res);
+}
+
+exports.addProduct = (req, res) => {
+    addProductToDb(req, res);
 }
